@@ -76,3 +76,98 @@ Conforme o ECMAScript standard temos 9 tipos de dados:
  * Function
 ## Primitivo Estrutural / Structural Root Primitive
  * null
+
+# Functions
+## Para que serve?
+* Dar significado a um bloco de código
+* Executar um bloco de código quando quiser
+* Agrupamento de código
+* Criar um aplicativo de frases motivacionais
+
+## Argumentos e parâmetros
+```js
+// function expression
+// function anonymous
+
+// parâmetros (parameters)
+const sum =  function(number1, number2) { // Função anônima, pois esta função não foi dado um nome
+  console.log(number1 + number2)
+}
+sum(2, 3) // arguments - argumentos
+```
+## Retornando valores dentro da função
+```js
+const sum =  function(number1, number2) { // Função anônima, pois esta função não foi dado um nome
+  total = (number1 + number2)
+  return total
+}
+let number1 = 34
+let number2 = 25
+console.log(`o número 1 é ${number1}`)
+console.log(`o número 2 é ${number2}`)
+console.log(`a soma é ${sum(number1, number2)}`)
+console.log(total)
+```
+```js
+// Função é um liquidificador
+function fazerSuco(fruta1, fruta2) {
+  return 'suco de: ' + fruta1 + fruta2
+}
+const copo = fazerSuco('banana', 'maçã')
+console.log(copo)
+
+// exemplo
+function nome(parametro1, parametro2, ...) {
+  // bloco de código
+}
+```
+## Function scope
+```js
+// function scope
+let subject
+function createThink() {
+  subject = 'study'
+  return subject
+}
+console.log(subject)
+console.log(createThink(subject))
+console.log(subject)
+```
+
+## function hoisting
+```js
+// Function Hoisting
+
+sayMyName()
+// function sayMyName() {
+//   console.log('Daniel')
+// }
+
+const sayMyName = function() { // undefined
+  console.log('Daniel')
+}
+```
+## Arrow function
+```js
+// arrow function
+const sayMyName = (name) => {
+  console.log(`Olá ${name}!`)
+}
+sayMyName('Daniel')
+```
+## Call Back Function
+```js
+// callback function
+// chamar de volta
+function sayMyName(name) {
+  console.log('antes de executar a função callback')
+  name()
+  console.log('depois de executar a função callback')
+
+}
+sayMyName(
+  () => {
+    console.log('estou em uma callback')
+  }
+)
+```
