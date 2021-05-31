@@ -171,3 +171,35 @@ sayMyName(
   }
 )
 ```
+## for...of
+Podemos percorrer percorrer os caracteres de uma palavra ou mesmo um array de nomes:  
+```javascript
+// for...of
+let name = 'Daniel'
+let names = ['João', 'Paulo', 'Pedro']
+
+for(let char of name){
+  console.log(name)
+}
+for(let name of names){
+  console.log(name)
+}
+```
+- No primeiro `for of`, percorremos todos os caracteres na palavra.
+- No segundo, imprimimos uma lista de names
+
+## for..in
+```javascript
+let person = {
+  name: 'Daniel',
+  age: 36,
+  weigth: 88.6
+}
+
+for(let property in person) {
+  console.log(property)
+  console.log(person[property])
+  console.log(person.name)
+  console.log(person("name"))
+}
+```
